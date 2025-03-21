@@ -27,6 +27,7 @@ jobs:
 
       - name: Install Fastlane
         run: gem install fastlane
+        # generate the signing certificates and provisioning profiles for our app
       - name: Install Fastlane
         run: fastlane match development --readonly
         env:
