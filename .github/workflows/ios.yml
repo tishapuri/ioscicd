@@ -37,4 +37,4 @@ jobs:
         run: |
           xcrun simctl list
           xcodebuild -list -project "ios demo.xcodeproj"
-          xcodebuild test-without-building -scheme "ios demo" -destination 'platform=iOS Simulator,name=iPhone 12,OS=latest' -allowProvisioningUpdates| xcpretty
+          xcodebuild test-without-building -scheme "ios demo" -destination 'platform=iOS Simulator,name=iPhone 16 Pro,OS=latest' -allowProvisioningUpdates| xcpretty
