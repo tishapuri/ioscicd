@@ -29,7 +29,7 @@ jobs:
         run: gem install fastlane
         # generate the signing certificates and provisioning profiles for our app
       - name: Install Fastlane
-        run: fastlane match development --readonly
+        run: fastlane match development
         env:
           MATCH_PASSWORD: ${{ secrets.MATCH_PASSWORD }}
       #- name: SwiftFormat
