@@ -32,8 +32,9 @@ jobs:
       #- name: SwiftFormat
        
 # run: swiftformat . --lint
-        
+      
       - name: Run tests
         run: |
+          xcrun simctl list
           xcodebuild -list -project "ios demo.xcodeproj"
           xcodebuild test-without-building -scheme "ios demo" -destination 'platform=iOS Simulator,name=iPhone 12,OS=latest' -allowProvisioningUpdates| xcpretty
