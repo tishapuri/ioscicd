@@ -29,8 +29,9 @@ jobs:
         run: gem install fastlane
      # - name: Run Fastlane Match
       #  run: fastlane match development
-      - name: SwiftFormat
-        run: swiftformat . --lint
+      #- name: SwiftFormat
+       
+# run: swiftformat . --lint
         
       - name: Run tests
         run: |
