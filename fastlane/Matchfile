@@ -1,4 +1,4 @@
-gitlab_project("gitlab-org/incubation-engineering/mobile-devops/demo-projects/ios-demo")
+git_url("https://github.com/tishapuri/ioscicd.git")
 
 storage_mode("gitlab_secure_files")
 
