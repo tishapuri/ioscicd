@@ -31,7 +31,10 @@ jobs:
       - name: Install Fastlane
         run: fastlane match development
         env:
+          # Clone repo where certificates are stored or create new 
           MATCH_PASSWORD: ${{ secrets.MATCH_PASSWORD }}
+          # Apple Developer Program account credentials for Fastlane ,apple_id is define in appfile
+          FASTLANE_PASSWORD: ${{ secrets.APPLE_PASSWORD }}
       #- name: SwiftFormat
        # run: swiftformat . --lint
       
