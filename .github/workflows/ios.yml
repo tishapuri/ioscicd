@@ -27,8 +27,12 @@ jobs:
 
       - name: Install Fastlane
         run: gem install fastlane
-
+      - name: Run Fastlane Match
+        run: fastlane match development
+      - name: SwiftFormat
+        run: swiftformat . --lint
+        
       - name: Run tests
         run: |
           xcodebuild -list -project "ios demo.xcodeproj"
-          xcodebuild test -scheme "ios demo" -destination 'platform=iOS Simulator,name=iPhone 12,OS=latest' | xcpretty
+          xcodebuild test-without-building -scheme "ios demo" -destination 'platform=iOS Simulator,name=iPhone 12,OS=latest' -allowProvisioningUpdates| xcpretty
