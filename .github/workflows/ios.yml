@@ -28,6 +28,9 @@ jobs:
       - name: Install Fastlane
         run: gem install fastlane
       - name: Install Fastlane
+        run: |
+          echo "gitlab_secure_files" | fastlane match init  
+      - name: Install Fastlane
         run: fastlane match development --readonly
         env:
           MATCH_PASSWORD: ${{ secrets.MATCH_PASSWORD }}
