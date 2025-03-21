@@ -31,4 +31,4 @@ jobs:
       - name: Run tests
         run: |
           xcodebuild -list -project "ios demo.xcodeproj"
-          xcodebuild test -scheme YourScheme -destination 'platform=iOS Simulator,name=iPhone 12,OS=latest' | xcpretty
+          xcodebuild test -scheme "ios demo" -destination 'platform=iOS Simulator,name=iPhone 12,OS=latest' | xcpretty
